@@ -8,4 +8,4 @@
       <h1 style="text-align:center">Application Monitoring</h1>
       <p>You have reached Application Monitoring</p>
    </body>
-</html
+</html>

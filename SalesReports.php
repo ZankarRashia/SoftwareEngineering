@@ -8,4 +8,4 @@
       <h1 style="text-align:center">Sales Reports</h1>
       <p>You have reached Sales Reports</p>
    </body>
-</html
+</html>

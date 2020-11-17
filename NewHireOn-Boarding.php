@@ -8,4 +8,4 @@
       <h1 style="text-align:center">New Hire On-Boarding</h1>
       <p>You have reached New Hire On-Boarding</p>
    </body>
-</html
+</html>
