@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 17, 2020 at 01:04 AM
+-- Generation Time: Nov 18, 2020 at 04:04 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.4
 
@@ -31,7 +31,7 @@ CREATE TABLE `admin` (
   `adminID` int(6) NOT NULL,
   `userName` varchar(20) NOT NULL,
   `password` varchar(100) NOT NULL,
-  `isSupportAdmin` varchar(1) NOT NULL DEFAULT 'N',
+  `isSupportAdmin` varchar(1) DEFAULT 'N',
   `isFinanceAdmin` varchar(1) DEFAULT 'N',
   `isSalesAdmin` varchar(1) DEFAULT 'N',
   `isHRAdmin` varchar(1) DEFAULT 'N',
@@ -39,6 +39,13 @@ CREATE TABLE `admin` (
   `email` varchar(100) NOT NULL,
   `name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`adminID`, `userName`, `password`, `isSupportAdmin`, `isFinanceAdmin`, `isSalesAdmin`, `isHRAdmin`, `isTechAdmin`, `email`, `name`) VALUES
+(100000, 'user1', 'pwd', 'Y', 'Y', 'Y', 'Y', 'Y', 'user1@gmail.com', 'Elvis ');
 
 --
 -- Indexes for dumped tables
@@ -58,7 +65,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `adminID` int(6) NOT NULL AUTO_INCREMENT;
+  MODIFY `adminID` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100001;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
