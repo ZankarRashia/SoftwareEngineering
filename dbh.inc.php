@@ -2,7 +2,7 @@
 
 $dbServername = "localhost";
 $dbUsername = "root";
-$dbPassword = "pwdpwd";
+$dbPassword = "";
 $dbName = "adminportaldb";
 
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);

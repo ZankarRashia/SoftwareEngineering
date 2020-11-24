@@ -23,24 +23,24 @@
 
                     if($_SESSION['isSupportAdmin'] == 'Y')
                     {
-                        echo '<li><a href="SupportPortal.php">Support Admin</a></li>';
+                        echo '<li><a href="SupportAdminP.php">Support Admin</a></li>';
 						
                     }
                     if($_SESSION['isFinanceAdmin'] == 'Y')
                     {
-                        echo '<li><a href="FinancePortal.php">Finance Admin</a></li>';                       
+                        echo '<li><a href="FinanceAdminP.php">Finance Admin</a></li>';                       
                     }
 					if($_SESSION['isSalesAdmin'] == 'Y')
                     {
-                        echo '<li><a href="SalesPortal.php">Sales Admin</a></li>';
+                        echo '<li><a href="SalesAdminP.php">Sales Admin</a></li>';
                     }
 					if($_SESSION['isHRAdmin'] == 'Y')
                     {
-                        echo '<li><a href="HRPortal.php">HR Admin</a></li>';                        
+                        echo '<li><a href="HRAdminP.php">HR Admin</a></li>';                        
                     }
 					if($_SESSION['isTechAdmin'] == 'Y')
                     {
-                        echo '<li><a href="TechAdmin.php">Tech Admin</a></li>';   
+                        echo '<li><a href="TechnologyAdminP.php">Tech Admin</a></li>';   
                     }
                 }
             ?>

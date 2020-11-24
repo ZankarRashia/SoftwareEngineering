@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 18, 2020 at 04:04 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.4
+-- Host: 127.0.0.1:3306
+-- Generation Time: Nov 24, 2020 at 02:11 AM
+-- Server version: 10.4.10-MariaDB
+-- PHP Version: 7.3.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -27,8 +28,9 @@ SET time_zone = "+00:00";
 -- Table structure for table `admin`
 --
 
-CREATE TABLE `admin` (
-  `adminID` int(6) NOT NULL,
+DROP TABLE IF EXISTS `admin`;
+CREATE TABLE IF NOT EXISTS `admin` (
+  `adminID` int(6) NOT NULL AUTO_INCREMENT,
   `userName` varchar(20) NOT NULL,
   `password` varchar(100) NOT NULL,
   `isSupportAdmin` varchar(1) DEFAULT 'N',
@@ -37,35 +39,20 @@ CREATE TABLE `admin` (
   `isHRAdmin` varchar(1) DEFAULT 'N',
   `isTechAdmin` varchar(1) DEFAULT 'N',
   `email` varchar(100) NOT NULL,
-  `name` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `name` varchar(100) NOT NULL,
+  PRIMARY KEY (`adminID`)
+) ENGINE=InnoDB AUTO_INCREMENT=100001 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`adminID`, `userName`, `password`, `isSupportAdmin`, `isFinanceAdmin`, `isSalesAdmin`, `isHRAdmin`, `isTechAdmin`, `email`, `name`) VALUES
+(2, 'Zanky', '123', 'Y', 'Y', 'Y', 'N', 'N', 'zanky@gmail.com', 'Zankar'),
+(3, 'Jonah', '123', 'N', 'N', 'Y', 'Y', 'Y', 'jonah@gmail.com', 'Jonah'),
+(4, 'Jeff', '123', 'N', 'N', 'N', 'Y', 'Y', 'jeff@gmail.com', 'Jonah'),
+(5, 'Jack', '123', 'N', 'N', 'N', 'Y', 'N', 'sarah@gmail.com', 'Jack'),
 (100000, 'user1', 'pwd', 'Y', 'Y', 'Y', 'Y', 'Y', 'user1@gmail.com', 'Elvis ');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`adminID`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `admin`
---
-ALTER TABLE `admin`
-  MODIFY `adminID` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100001;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
